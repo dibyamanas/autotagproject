@@ -2,13 +2,13 @@ name: Bump version
 
 on:
   pull_request:
-    types:
+    types::
       - closed
 
 jobs:
   bump-version:
     if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
@@ -20,6 +20,6 @@ jobs:
         id: tag
         uses: ./.github/action/github-tag-action
         env:
-          VERBOSE: true
           GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
-          GIT_API_TAGGING: false # uses g
+          WITH_V: true
+          REEASE_BRANCHS: master
