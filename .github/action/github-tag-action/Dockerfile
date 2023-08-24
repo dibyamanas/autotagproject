@@ -5,8 +5,8 @@ LABEL "maintainer"="prasanna"
 
 RUN apk --no-cache add bash git curl jq && npm install -g semver
 
-RUN chmod +x entrypoint.sh
-
 COPY entrypoint.sh /entrypoint.sh
+
+RUN chmod +x entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
