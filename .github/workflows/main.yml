@@ -22,4 +22,5 @@ jobs:
         env:
           VERBOSE: true
           GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
+          WITH_V: true
           GIT_API_TAGGING: false
