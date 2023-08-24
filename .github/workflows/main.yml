@@ -20,7 +20,6 @@ jobs:
         id: tag
         uses: ./.github/action/github-tag-action
         env:
-          VERBOSE: true
           GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
           WITH_V: true
-          GIT_API_TAGGING: false
+          RELEASE_BRANCHES: master
