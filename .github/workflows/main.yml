@@ -23,5 +23,5 @@ jobs:
         uses: ./.github/action/github-tag-action
         env:
           VERBOSE: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
           GIT_API_TAGGING: false # uses g
